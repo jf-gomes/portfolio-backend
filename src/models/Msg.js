@@ -12,6 +12,10 @@ const msgSchema = new mongoose.Schema({
     content: {
         type: String,
         required: true
+    },
+    sentIn: {
+        type: Date,
+        default: Date.now()
     }
 })
 

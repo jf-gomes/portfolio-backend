@@ -5,4 +5,12 @@ async function sendMsg(req, res){
     return res.status(201).json('Message sent')
 }
 
-export { sendMsg }
+async function getMsg(req, res){
+    const messages = await Msg.find()
+    return res.status(200).json(messages)
+}
+
+export { 
+    sendMsg,
+    getMsg
+}
